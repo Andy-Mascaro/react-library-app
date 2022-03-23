@@ -1,20 +1,30 @@
 import BookList from './views/Books/BookList';
 import './App.css';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import BookDetail from './views/Books/BookDetail';
+import Header from './components/Header/Header';
 
 
 
 function App() {
   // TODO: Add routes to books & views
   return (
-    <main className="container">
-      <BrowserRouter>
-        <Switch>
-          <h1>Library Catalog</h1>
+    <BrowserRouter>
+    
+      <main className="container">
+        <h1>Library Catalog</h1>
+      </main>
+      <Header />
+      <Switch>
+        <Route exact path="/bookList">
           <BookList />
-        </Switch>
-      </BrowserRouter>
-    </main>
+        </Route>
+        <Route exact path="/books/:id">
+          <BookDetail />
+        </Route> 
+      </Switch>
+    </BrowserRouter>
+    
   );
 }
 
