@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default function Home() {
   return ( 
     <> 
-      <NavLink exact to={'/bookList'}></NavLink>
+      <NavLink exact to={'/bookList'}>Link To Books</NavLink>
     </>
   );
 }
