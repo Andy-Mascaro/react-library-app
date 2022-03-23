@@ -12,9 +12,7 @@ function App() {
         <h1>Library Catalog</h1>
       </main>
       <Switch>
-        <Route exact path="/home">
-          <Home />
-        </Route>
+        <Home />
         <Route exact path="/bookList">
           <BookList />
         </Route>
