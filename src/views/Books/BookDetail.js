@@ -18,7 +18,7 @@ function BookDetail() {
 
   return (
     <>
-      <NavLink exact to={'/bookList'}>
+      <NavLink exact to={'/books'}>
         <p>Return To Books List</p>
       </NavLink>
       <Book book={book} showDetail />;
